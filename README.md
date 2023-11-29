@@ -19,7 +19,7 @@ Budget Breeze is an financial management app that is designed for adults and col
 
 1. **Sign In or Create an Account:**
 
-   - Sign in using your Budget Breeze account username and password 
+   - Sign in using your Budget Breeze account email and password 
    - Create an account using the sign up button on the log in page. 
 
 
