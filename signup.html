@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create an Account</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <main class="container">
+        <h1 class="mt-5 text-center">Budget Breeze Sign Up</h1>
+        <br>
+        <label> Please enter the following information to create a Budget Breeze account:</label>
+        <form action="/dashboard" method="post">
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" required>
+        </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+
+            <div class="text-center mt-3">
+                <button type="button" class="btn btn-primary" onclick="ValidateUserInfoFilled()">Create an Account</button>
+            </div>
+            
+        </form>
+
+    </main>
+</body>
+
+<script>
+    function ValidateUserInfoFilled(){
+        var firstName = document.getElementById('firstName').value
+      var Email = document.getElementById('email').value
+      var Password = document.getElementById('password').value
+
+      if (Email === "" && Password === "" && firstName =="")
+      {
+
+        alert('Please ensure all fields are complete. Thank You!');
+
+      }
+      else{
+
+        window.location.href = "index.html";
+
+      }
+    } 
+    </script>
+
+</html>
